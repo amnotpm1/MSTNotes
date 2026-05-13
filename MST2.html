@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who's Involved — Elite Black Label Program</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #e8eaf2;
+  font-family: 'Nunito', sans-serif;
+  color: #1a1a2e;
+  padding: 28px 28px 64px;
+  min-height: 100vh;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto 36px;
+  border-radius: 26px;
+  overflow: hidden;
+  min-height: 280px;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(10,6,30,0.82) 0%, rgba(60,30,120,0.65) 50%, rgba(10,6,30,0.75) 100%),
+    url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1400&q=80&fit=crop') center/cover no-repeat;
+  z-index: 0;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 40%, rgba(124,92,191,0.35) 0%, transparent 65%);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px 44px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.hero-text {}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 30px;
+  padding: 5px 14px;
+  font-size: 10.5px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: #a07de0;
+  border-radius: 50%;
+}
+.hero-title {
+  font-size: 38px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.hero-title span { color: #c4a8f8; }
+.hero-sub {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
+  max-width: 480px;
+}
+.hero-cta-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* ── PAGE TITLE (now just used for spacing) ── */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #7c5cbf;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(124,92,191,0.35);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+}
+.cta-btn:hover {
+  background: #5a3da0;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(124,92,191,0.45);
+}
+.cta-btn:active {
+  transform: translateY(0);
+}
+
+/* ── DIAGRAM WRAPPER ── */
+.diagram {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── SECTION LABEL ── */
+.section-label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 30px 0 16px;
+}
+.sline { flex: 1; height: 1px; background: #d4d6e4; }
+.stxt {
+  font-size: 11px;
+  font-weight: 800;
+  color: #b0b4cc;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ── CARDS ── */
+.card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 22px 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  width: 100%;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(0,0,0,0.11);
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.icon-wrap {
+  width: 50px; height: 50px;
+  border-radius: 15px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.card-meta { flex: 1; }
+.card-role {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.card-name {
+  font-size: 17px;
+  font-weight: 900;
+  color: #1a1a2e;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+.card-loc {
+  font-size: 11px;
+  color: #bbb;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* CHIPS (category badges like Mondly) */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.chip {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.chip-purple { background: #f0edff; color: #7c5cbf; }
+.chip-green  { background: #eafaf1; color: #27ae60; }
+.chip-blue   { background: #eaf3ff; color: #2980b9; }
+.chip-orange { background: #fff5ec; color: #e67e22; }
+.chip-red    { background: #fff0f0; color: #c0392b; }
+.chip-grey   { background: #f5f5f5; color: #888; }
+.chip-teal   { background: #e8fafa; color: #16a085; }
+.chip-dark   { background: #1a1a2e; color: #fff; }
+
+/* BULLETS */
+.bullets { list-style: none; margin-bottom: 14px; display: flex; flex-direction: column; gap: 7px; }
+.bullets li {
+  font-size: 13px;
+  color: #444;
+  font-weight: 600;
+  line-height: 1.5;
+  padding-left: 18px;
+  position: relative;
+}
+.bullets li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #c8cadc;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+/* WARN TAGS */
+.warns { display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
+.warn {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 9px 13px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+.warn-icon { flex-shrink: 0; font-size: 14px; margin-top: 1px; }
+.warn-red    { background: #fff2f2; color: #c0392b; }
+.warn-amber  { background: #fffbf0; color: #d68910; }
+.warn-blue   { background: #f0f6ff; color: #2471a3; }
+
+/* COLOUR THEMES */
+.t-purple .icon-wrap { background: #f0edff; }
+.t-purple .card-role { color: #7c5cbf; }
+.t-blue   .icon-wrap { background: #eaf3ff; }
+.t-blue   .card-role { color: #2471a3; }
+.t-navy   .icon-wrap { background: #e8edf8; }
+.t-navy   .card-role { color: #1a4f8a; }
+.t-violet .icon-wrap { background: #ede8ff; }
+.t-violet .card-role { color: #6c3fc0; }
+.t-teal   .icon-wrap { background: #e6f8f6; }
+.t-teal   .card-role { color: #148f77; }
+.t-green  .icon-wrap { background: #eafaf1; }
+.t-green  .card-role { color: #1e8449; }
+.t-grey   .icon-wrap { background: #f5f5f5; }
+.t-grey   .card-role { color: #7f8c8d; }
+.t-red    .icon-wrap { background: #fdf0f0; }
+.t-red    .card-role { color: #a93226; }
+.t-orange .icon-wrap { background: #fef5ec; }
+.t-orange .card-role { color: #ca6f1e; }
+
+/* ACTIVE CARD (like the purple schedule card in Mondly) */
+.card-active {
+  background: linear-gradient(135deg, #7c5cbf 0%, #5a3da0 100%);
+  color: #fff;
+}
+.card-active .card-name { color: #fff; }
+.card-active .card-loc  { color: rgba(255,255,255,0.6); }
+.card-active .card-role { color: rgba(255,255,255,0.75); }
+.card-active .icon-wrap { background: rgba(255,255,255,0.18); }
+.card-active .bullets li { color: rgba(255,255,255,0.85); }
+.card-active .bullets li::before { color: rgba(255,255,255,0.35); }
+.card-active .chips .chip { background: rgba(255,255,255,0.18); color: #fff; }
+.card-active .warn-red { background: rgba(0,0,0,0.2); color: #ffb3b3; }
+
+/* ROWS */
+.row { width: 100%; display: flex; gap: 16px; justify-content: center; }
+.row .card { flex: 1; }
+.r1 .card { max-width: 480px; }
+.r2 .card { max-width: 500px; }
+.r3 .card { max-width: 334px; }
+
+/* CONNECTORS */
+.conn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 3px 0;
+}
+.vline { width: 2px; height: 22px; background: #d0d4e4; border-radius: 2px; }
+.vdash { width: 2px; height: 22px; background: repeating-linear-gradient(to bottom,#ccc 0,#ccc 5px,transparent 5px,transparent 10px); }
+.conn-chip {
+  background: #fff;
+  border: 1.5px solid #e4e6f0;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #b0b4cc;
+  padding: 5px 18px;
+  margin: 2px 0;
+  white-space: nowrap;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+.arrow-d {
+  width: 0; height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #cdd0e0;
+  margin-top: 1px;
+}
+
+/* STATS ROW (like Mondly progress stats) */
+.stats-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+.stat-box {
+  flex: 1;
+  background: #f8f8fc;
+  border-radius: 14px;
+  padding: 12px 14px;
+  text-align: center;
+}
+.stat-box .stat-icon {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  margin: 0 auto 6px;
+}
+.stat-box .stat-val {
+  font-size: 20px;
+  font-weight: 900;
+  color: #1a1a2e;
+  letter-spacing: -0.5px;
+}
+.stat-box .stat-lbl {
+  font-size: 10px;
+  font-weight: 700;
+  color: #bbb;
+  letter-spacing: 0.5px;
+}
+
+/* PRINCIPAL INPUT */
+.principal-input-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5f2ff;
+  border: 2px solid #d4c8f5;
+  border-radius: 16px;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.pi-label-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pi-icon { font-size: 24px; }
+.pi-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #5a3da0;
+}
+.pi-sub {
+  font-size: 10px;
+  font-weight: 600;
+  color: #a090d0;
+  margin-top: 1px;
+}
+.pi-field-wrap {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 2px solid #c4b0f0;
+  border-radius: 12px;
+  padding: 8px 14px;
+  gap: 6px;
+  transition: border-color 0.2s;
+}
+.pi-field-wrap:focus-within {
+  border-color: #7c5cbf;
+  box-shadow: 0 0 0 3px rgba(124,92,191,0.15);
+}
+.pi-currency {
+  font-size: 18px;
+  font-weight: 900;
+  color: #7c5cbf;
+}
+.pi-input {
+  border: none;
+  outline: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #1a1a2e;
+  width: 160px;
+  background: transparent;
+  letter-spacing: -0.5px;
+}
+.pi-input::-webkit-outer-spin-button,
+.pi-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.pi-input[type=number] { -moz-appearance: textfield; }
+
+/* PAYOUT TABLE */
+.payout-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.payout-table thead tr {
+  border-bottom: 2px solid #ede8ff;
+}
+.payout-table thead th {
+  padding: 9px 12px;
+  font-size: 10px;
+  font-weight: 800;
+  color: #9b80d8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+  background: #faf8ff;
+}
+.payout-table thead th:first-child { border-radius: 8px 0 0 8px; }
+.payout-table thead th:last-child  { border-radius: 0 8px 8px 0; }
+.payout-table tbody tr {
+  border-bottom: 1px solid #f2f2f8;
+  transition: background 0.15s;
+}
+.payout-table tbody tr:hover { background: #faf8ff; }
+.payout-table tbody tr:last-child { border-bottom: none; }
+.payout-table tbody td {
+  padding: 11px 12px;
+  color: #444;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.row-highlight td { background: #f5f0ff; }
+.row-bonus td { background: #fffdf5; }
+.day-pill {
+  display: inline-block;
+  background: #ede8ff;
+  color: #7c5cbf;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.day-pill-purple { background: #7c5cbf; color: #fff; }
+.day-pill-grey   { background: #f0f0f0; color: #888; }
+.rate-val  { font-size: 14px; font-weight: 800; color: #1e8449; }
+.dollar-val { font-size: 14px; font-weight: 800; color: #1a1a2e; }
+.status-chip {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.status-income  { background: #eafaf1; color: #1e8449; }
+.status-maturity{ background: #7c5cbf; color: #fff; }
+.status-bonus   { background: #fff8e6; color: #d68910; }
+
+/* PAYOUT SUMMARY */
+.payout-summary {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+.ps-box {
+  flex: 1;
+  background: #f8f6ff;
+  border-radius: 14px;
+  padding: 12px 14px;
+  border: 1px solid #ede8ff;
+}
+.ps-box-amber {
+  background: #fffcf0;
+  border-color: #f5d88a;
+}
+.ps-label {
+  font-size: 9.5px;
+  font-weight: 800;
+  color: #b0a0d8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 4px;
+}
+.ps-val {
+  font-size: 18px;
+  font-weight: 900;
+  color: #1a1a2e;
+  letter-spacing: -0.5px;
+  margin-bottom: 2px;
+}
+.ps-sub {
+  font-size: 10px;
+  font-weight: 600;
+  color: #bbb;
+}
+
+/* PROS / CONS */
+.procons-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.procons-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 22px 26px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  width: 100%;
+}
+.pc-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.pc-icon { font-size: 22px; }
+.pc-title {
+  font-size: 16px;
+  font-weight: 900;
+  color: #1a1a2e;
+  letter-spacing: -0.3px;
+}
+.pc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.pc-table thead tr th {
+  padding: 10px 16px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  width: 50%;
+}
+.th-pro {
+  background: #edfaf3;
+  color: #1e8449;
+  text-align: left;
+  padding-left: 16px;
+  border-radius: 10px 0 0 0;
+}
+.th-con {
+  background: #fff2f2;
+  color: #c0392b;
+  text-align: left;
+  padding-left: 16px;
+  border-radius: 0 10px 0 0;
+}
+.pc-table tbody tr td {
+  padding: 11px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  line-height: 1.5;
+  vertical-align: top;
+  border-bottom: 1px solid #f2f3f8;
+}
+.pc-table tbody tr:last-child td { border-bottom: none; }
+.pc-table tbody tr td:first-child {
+  background: #fafffe;
+  border-right: 1px solid #f2f3f8;
+}
+.pc-table tbody tr td:last-child { background: #fffafa; }
+.pc-table tbody tr:hover td { filter: brightness(0.97); }
+
+/* ── INTRO SECTION ── */
+.intro-wrap {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto 32px;
+}
+.intro-card {
+  background: #fff;
+  border-radius: 22px;
+  padding: 32px 36px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  margin-bottom: 16px;
+}
+.intro-card h2 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #1a1a2e;
+  letter-spacing: -0.4px;
+  margin-bottom: 10px;
+}
+.intro-card p {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+.intro-card p:last-child { margin-bottom: 0; }
+.intro-stats {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.istat {
+  flex: 1;
+  min-width: 160px;
+  background: #faf8ff;
+  border: 1.5px solid #e8e0f8;
+  border-radius: 16px;
+  padding: 16px 18px;
+  text-align: center;
+}
+.istat .is-val {
+  font-size: 26px;
+  font-weight: 900;
+  color: #7c5cbf;
+  letter-spacing: -1px;
+  margin-bottom: 3px;
+}
+.istat .is-lbl {
+  font-size: 11px;
+  font-weight: 700;
+  color: #a090c8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+/* ── RETURN ARCHITECTURE ── */
+.arch-wrap {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto 32px;
+}
+.arch-title-row {
+  margin-bottom: 16px;
+}
+.arch-title-row h2 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #1a1a2e;
+  letter-spacing: -0.4px;
+  margin-bottom: 3px;
+}
+.arch-title-row p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #aaa;
+}
+.arch-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.arch-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 22px 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.arch-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(0,0,0,0.1); }
+.arch-icon {
+  width: 46px; height: 46px;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+.arch-card h3 {
+  font-size: 14px;
+  font-weight: 900;
+  color: #1a1a2e;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+}
+.arch-card p {
+  font-size: 12px;
+  font-weight: 600;
+  color: #777;
+  line-height: 1.6;
+}
+.arch-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* ── TIMELINE STRIP ── */
+.timeline-strip {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto 32px;
+  background: #fff;
+  border-radius: 22px;
+  padding: 28px 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.timeline-strip h2 {
+  font-size: 16px;
+  font-weight: 900;
+  color: #1a1a2e;
+  margin-bottom: 22px;
+  letter-spacing: -0.3px;
+}
+.tl-track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.tl-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 8px;
+}
+.tl-dot {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  flex-shrink: 0;
+}
+.tl-label {
+  font-size: 10px;
+  font-weight: 800;
+  text-align: center;
+  max-width: 70px;
+  line-height: 1.3;
+}
+.tl-arrow {
+  flex: 1;
+  height: 3px;
+  min-width: 24px;
+  position: relative;
+  top: -18px;
+}
+.tl-arrow::after {
+  content: '▶';
+  position: absolute;
+  right: -6px;
+  top: -7px;
+  font-size: 9px;
+}
+
+/* ── ARC SECTION ── */
+.arc-wrap {
+  max-width: 1040px;
+  width: 100%;
+  margin: 0 auto 32px;
+}
+.arc-header {
+  background: linear-gradient(135deg, #2d1a5c 0%, #4a2890 100%);
+  border-radius: 22px 22px 0 0;
+  padding: 26px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.arc-header-text h2 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.4px;
+  margin-bottom: 4px;
+}
+.arc-header-text p {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
+  max-width: 500px;
+}
+.arc-header-badge {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 10px 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.arc-header-badge .abv {
+  font-size: 22px;
+  font-weight: 900;
+  color: #c4a8f8;
+  letter-spacing: -0.5px;
+}
+.arc-header-badge .abl {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.arc-body {
+  background: #fff;
+  border-radius: 0 0 22px 22px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+.arc-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.arc-table tr {
+  border-bottom: 1px solid #f2f3f8;
+  transition: background 0.12s;
+}
+.arc-table tr:last-child { border-bottom: none; }
+.arc-table tr:hover { background: #faf8ff; }
+.arc-table td {
+  padding: 13px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  vertical-align: top;
+  line-height: 1.5;
+}
+.arc-table td:first-child {
+  width: 36%;
+  font-weight: 800;
+  color: #1a1a2e;
+  font-size: 12.5px;
+}
+.arc-table td:last-child { color: #555; }
+.arc-tag {
+  display: inline-block;
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.arc-warn-row td { background: #fff8f8 !important; }
+.arc-warn-row td:first-child { color: #b03030; }
+
+/* ── ARC FLOW ── */
+.arc-flow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 18px 24px;
+  background: #f8f6ff;
+  border-top: 1px solid #ede8ff;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+.arc-flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  text-align: center;
+}
+.afs-dot {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+.afs-lbl {
+  font-size: 9.5px;
+  font-weight: 800;
+  color: #7c5cbf;
+  max-width: 72px;
+  line-height: 1.3;
+}
+.afs-arrow {
+  font-size: 14px;
+  color: #c8b8f0;
+  padding: 0 6px;
+  margin-top: -14px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+/* LEGEND */
+.legend {
+  max-width: 1040px;
+  width: 100%;
+  margin-top: 36px;
+  background: #fff;
+  border-radius: 22px;
+  padding: 22px 28px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.legend h3 {
+  font-size: 11px;
+  font-weight: 800;
+  color: #b0b4cc;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.lgrid { display: flex; flex-wrap: wrap; gap: 10px 24px; }
+.li { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: #888; }
+.ldot { width: 10px; height: 10px; border-radius: 50%; }
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #c0c4d4;
+  line-height: 1.9;
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Manhattan ST Notes, LLC</div>
+      <h1 class="hero-title">Private Credit<br><span>Investment Fund</span></h1>
+      <p class="hero-sub">How it works, who's involved, and what you need to know before investing — in plain English</p>
+    </div>
+    <div class="hero-cta-wrap">
+      <a href="https://gateway.manhattanpcm.com/auth/register?pid=2573" target="_blank" class="cta-btn">Create Account →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ INTRO SECTION ══ -->
+<div class="intro-wrap">
+  <div class="intro-card">
+    <h2>What is the Elite Black Label Program?</h2>
+    <p>The Elite Black Label Program – Signature Series I is a <strong>private, unregistered investment</strong> offered by Manhattan ST Notes, LLC. It is structured as a Secured Note — meaning you lend money to the company and they promise to pay you back with returns over 360 days. Think of it like a private bond with quarterly income payments.</p>
+    <p>Your money is deployed into <strong>litigation finance</strong> — funding large commercial lawsuits, bankruptcy proceedings, and arbitration cases. The fund aims to profit from the outcomes of those legal battles. After your 360-day term ends, you may also participate in any additional profits the fund generates through the post-maturity bonus program (called ARC).</p>
+    <p><strong>Important:</strong> This is a high-risk, illiquid investment. It is not listed on any exchange, not regulated by the SEC, and once you invest you cannot exit early. Always seek independent financial and legal advice before committing funds.</p>
+    <div class="intro-stats">
+      <div class="istat">
+        <div class="is-val">$100K</div>
+        <div class="is-lbl">Minimum Investment</div>
+      </div>
+      <div class="istat">
+        <div class="is-val">360</div>
+        <div class="is-lbl">Day Term</div>
+      </div>
+      <div class="istat">
+        <div class="is-val">46.5%</div>
+        <div class="is-lbl">Total Promised Income</div>
+      </div>
+      <div class="istat">
+        <div class="is-val">100%</div>
+        <div class="is-lbl">Claimed Principal Return</div>
+      </div>
+      <div class="istat">
+        <div class="is-val">+150%</div>
+        <div class="is-lbl">Max Bonus (ARC) — not guaranteed</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ RETURN ARCHITECTURE ══ -->
+<div class="arch-wrap">
+  <div class="arch-title-row">
+    <h2>Return Architecture</h2>
+    <p>Four layers of potential return, each with a different risk profile</p>
+  </div>
+  <div class="arch-grid">
+    <div class="arch-card">
+      <div class="arch-icon" style="background:#f0edff">📅</div>
+      <h3>4× Rolling 90-Day Income Windows</h3>
+      <p>Income payments at Days 90, 180, 270, and 360 — each calculated as a percentage of your principal. Rates rise each quarter: 7% → 10% → 13.5% → 16%.</p>
+      <span class="arch-badge" style="background:#f0edff;color:#7c5cbf">Promised · Not guaranteed</span>
+    </div>
+    <div class="arch-card">
+      <div class="arch-icon" style="background:#eaf3ff">🚪</div>
+      <h3>Structured Liquidity Optionality</h3>
+      <p>At each 90-day window you can elect to exit early and receive 100% of your principal back. If you don't act in time, your capital automatically rolls over for another 90 days.</p>
+      <span class="arch-badge" style="background:#fff8e6;color:#d68910">⚠️ Miss deadline = auto-rollover</span>
+    </div>
+    <div class="arch-card">
+      <div class="arch-icon" style="background:#eafaf1">🛡️</div>
+      <h3>100% Principal Certainty at Maturity</h3>
+      <p>At Day 360, the full amount you invested is claimed to be returned to you under the Multi-Tier Principal Protection (MTPP) framework. There is no independent verification of this claim.</p>
+      <span class="arch-badge" style="background:#fff0f0;color:#c0392b">🚫 No third-party verification</span>
+    </div>
+    <div class="arch-card">
+      <div class="arch-icon" style="background:#fdf0ff">🌟</div>
+      <h3>Up to 1.5× Post-Maturity Participation</h3>
+      <p>After Day 360, if the litigation cases the fund invested in generate profits, you may receive up to 150% of your original investment as a bonus. If no profits — you receive nothing extra.</p>
+      <span class="arch-badge" style="background:#fff8e6;color:#d68910">Expect $0 · Treat as a bonus</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="diagram">
+
+  <!-- DEAL STRUCTURE HEADING -->
+  <div class="arch-title-row" style="width:100%;max-width:1040px;margin-bottom:20px">
+    <h2>The Deal Structure</h2>
+    <p>Every party involved, their role, and what you need to know before signing</p>
+  </div>
+
+  <!-- ── TIER 1: SUBSCRIBER ── -->
+  <div class="row r1">
+    <div class="card t-purple">
+      <div class="card-head">
+        <div class="icon-wrap">🧑‍💼</div>
+        <div class="card-meta">
+          <div class="card-role">The Investor</div>
+          <div class="card-name">The Subscriber</div>
+        </div>
+      </div>
+      <div class="chips">
+        <span class="chip chip-purple">Min. $100,000</span>
+        <span class="chip chip-grey">360-day lock-in</span>
+      </div>
+      <ul class="bullets">
+        <li>Puts in at least <strong>$100,000</strong>, signs the agreement, and wires funds within 5 business days</li>
+        <li>Gets paid every 90 days and receives full principal back at Day 360</li>
+        <li>After Day 360, may receive bonus payments (ARC) of <strong>up to 150%</strong> of your original amount — but <strong>expect $0</strong>; anything paid is a bonus, not guaranteed</li>
+        <li>Can only communicate via the issuer's private website — no email or phone</li>
+      </ul>
+      <div class="warns">
+        <div class="warn warn-red"><span class="warn-icon">🚫</span>Once submitted — cannot cancel, change your mind, or get your money back</div>
+        <div class="warn warn-red"><span class="warn-icon">⚖️</span>Gives up the right to a jury trial — all disputes go to arbitration in New York</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="conn">
+    <div class="vline"></div>
+    <div class="conn-chip">If accepted, here's what you're promised to receive</div>
+    <div class="vline"></div>
+    <div class="arrow-d"></div>
+  </div>
+
+  <!-- ── PAYOUT SCHEDULE ── -->
+  <div class="row r1" style="max-width:640px">
+    <div class="card t-purple" style="max-width:640px">
+      <div class="card-head">
+        <div class="icon-wrap">📅</div>
+        <div class="card-meta">
+          <div class="card-role">Promised Payment Schedule</div>
+          <div class="card-name">Your Income Timeline</div>
+        </div>
+      </div>
+      <!-- PRINCIPAL INPUT -->
+      <div class="principal-input-row">
+        <div class="pi-label-wrap">
+          <span class="pi-icon">💰</span>
+          <div>
+            <div class="pi-title">Enter your investment amount</div>
+            <div class="pi-sub">Minimum $100,000 · Table updates instantly</div>
+          </div>
+        </div>
+        <div class="pi-field-wrap">
+          <span class="pi-currency">$</span>
+          <input
+            type="number"
+            id="principalInput"
+            class="pi-input"
+            value="100000"
+            min="100000"
+            step="10000"
+            oninput="recalculate()"
+          />
+        </div>
+      </div>
+
+      <table class="payout-table">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>What Happens</th>
+            <th>Rate</th>
+            <th>Your Payout</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="day-pill">Day 90</span></td>
+            <td>1st income payment</td>
+            <td class="rate-val">7.00%</td>
+            <td class="dollar-val" id="pay90">$7,000</td>
+            <td><span class="status-chip status-income">Income</span></td>
+          </tr>
+          <tr>
+            <td><span class="day-pill">Day 180</span></td>
+            <td>2nd income payment</td>
+            <td class="rate-val">10.00%</td>
+            <td class="dollar-val" id="pay180">$10,000</td>
+            <td><span class="status-chip status-income">Income</span></td>
+          </tr>
+          <tr>
+            <td><span class="day-pill">Day 270</span></td>
+            <td>3rd income payment</td>
+            <td class="rate-val">13.50%</td>
+            <td class="dollar-val" id="pay270">$13,500</td>
+            <td><span class="status-chip status-income">Income</span></td>
+          </tr>
+          <tr class="row-highlight">
+            <td><span class="day-pill day-pill-purple">Day 360</span></td>
+            <td>4th income + <strong>full principal back</strong></td>
+            <td class="rate-val">16.00%</td>
+            <td class="dollar-val" id="pay360">$16,000 + $100,000</td>
+            <td><span class="status-chip status-maturity">Maturity</span></td>
+          </tr>
+          <tr class="row-bonus">
+            <td><span class="day-pill day-pill-grey">Day 361–720</span></td>
+            <td>Bonus — only if lawsuits win</td>
+            <td class="rate-val" style="color:#d68910">0–150%</td>
+            <td class="dollar-val" id="payARC" style="color:#d68910">$0–$150,000</td>
+            <td><span class="status-chip status-bonus">Bonus only</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="payout-summary">
+        <div class="ps-box">
+          <div class="ps-label">Total promised income</div>
+          <div class="ps-val" id="totalIncome">$46,500</div>
+          <div class="ps-sub" id="totalIncomePct">46.5% of your investment</div>
+        </div>
+        <div class="ps-box">
+          <div class="ps-label">Principal back at Day 360</div>
+          <div class="ps-val" id="principalBack">$100,000</div>
+          <div class="ps-sub">Claimed — not independently verified</div>
+        </div>
+        <div class="ps-box ps-box-amber">
+          <div class="ps-label">Bonus (ARC) payments</div>
+          <div class="ps-val" style="color:#d68910">$0 expected</div>
+          <div class="ps-sub" id="arcMax">Up to $150,000 if lawsuits win</div>
+        </div>
+      </div>
+      <div class="warns" style="margin-top:10px">
+        <div class="warn warn-red"><span class="warn-icon">⚠️</span>These are <strong>promised</strong> figures from the agreement — not guaranteed by any regulator. Returns depend on the issuer's ability to pay.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="conn">
+    <div class="vline"></div>
+    <div class="conn-chip">Signs agreement + wires money to the issuer</div>
+    <div class="vline"></div>
+    <div class="arrow-d"></div>
+  </div>
+
+  <!-- ── TIER 2: ISSUER ── -->
+  <div class="row r1">
+    <div class="card card-active">
+      <div class="card-head">
+        <div class="icon-wrap">🏢</div>
+        <div class="card-meta">
+          <div class="card-role">The Company Issuing the Investment</div>
+          <div class="card-name">Manhattan ST Notes, LLC</div>
+          <div class="card-loc">Delaware, USA (registered agent address)</div>
+        </div>
+      </div>
+      <div class="chips">
+        <span class="chip">Issuer</span>
+        <span class="chip">Not SEC-registered</span>
+        <span class="chip">No fiduciary duty</span>
+      </div>
+      <ul class="bullets">
+        <li>Issues your "Secured Note" — the official document for your investment</li>
+        <li>Promises to return 100% of your principal at Day 360</li>
+        <li>Can accept or reject your application for any reason, without explaining why</li>
+        <li>Can change the investment terms without your consent</li>
+      </ul>
+      <div class="warns">
+        <div class="warn warn-red"><span class="warn-icon">🚫</span>Can cancel the whole agreement at any time, for any reason, without warning</div>
+        <div class="warn warn-red"><span class="warn-icon">🚫</span>Not registered with the SEC or any regulator — no government oversight</div>
+        <div class="warn warn-red"><span class="warn-icon">📍</span>Delaware address is a generic legal mailbox, not an actual operating office</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="conn">
+    <div class="vline"></div>
+    <div class="conn-chip">Managed and run by these two bodies</div>
+    <div class="vline"></div>
+    <div class="arrow-d"></div>
+  </div>
+
+  <!-- ── TIER 3: MANAGING PARTNER + ELITE OFFICE ── -->
+  <div class="row r2">
+    <div class="card t-navy">
+      <div class="card-head">
+        <div class="icon-wrap">🏦</div>
+        <div class="card-meta">
+          <div class="card-role">Managing Partner</div>
+          <div class="card-name">Manhattan Private Credit Markets, LLC</div>
+          <div class="card-loc">1501 Broadway, New York</div>
+        </div>
+      </div>
+      <div class="chips">
+        <span class="chip chip-blue">Day-to-day management</span>
+        <span class="chip chip-grey">Singapore VCC sponsor</span>
+      </div>
+      <ul class="bullets">
+        <li>Runs the overall program and decides where your money is deployed</li>
+        <li>Signs off on accepting your application</li>
+        <li>Also sponsors a Singapore investment company your funds may go through</li>
+      </ul>
+    </div>
+    <div class="card t-violet">
+      <div class="card-head">
+        <div class="icon-wrap">🔐</div>
+        <div class="card-meta">
+          <div class="card-role">The Gatekeeper</div>
+          <div class="card-name">Elite Series Capital Office</div>
+          <div class="card-loc">Admin arm of Manhattan PCM</div>
+        </div>
+      </div>
+      <div class="chips">
+        <span class="chip chip-purple">KYC &amp; AML checks</span>
+        <span class="chip chip-purple">Controls all access</span>
+      </div>
+      <ul class="bullets">
+        <li>Verifies your identity and the source of your funds</li>
+        <li>Formally accepts your subscription and issues all confirmations</li>
+        <li>Controls the investor platform — your only point of contact</li>
+      </ul>
+      <div class="warns">
+        <div class="warn warn-red"><span class="warn-icon">🚫</span>Single point of control — no independent body checking their decisions</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="conn">
+    <div class="vdash"></div>
+    <div class="conn-chip">Every message, request, and election goes through ↓</div>
+    <div class="vdash"></div>
+    <div class="arrow-d"></div>
+  </div>
+
+  <!-- ── TIER 4: PLATFORM ── -->
+  <div class="row r1">
+    <div class="card t-teal">
+      <div class="card-head">
+        <div class="icon-wrap">💻</div>
+        <div class="card-meta">
+          <div class="card-role">The Only Way to Reach Them</div>
+          <div class="card-name">InvestorDisplay Platform</div>
+          <div class="card-loc">manhattanpcm.com — private portal</div>
+        </div>
+      </div>
+      <div class="chips">
+        <span class="chip chip-teal">Sole legal channel</span>
+        <span class="chip chip-grey">No email / no phone</span>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-icon" style="background:#fff0f0">🚫</div>
+          <div class="stat-val" style="color:#c0392b;font-size:13px;margin-top:2px">No SWIFT</div>
+          <div class="stat-lbl">No wire confirmation ever issued</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon" style="background:#fff8ec">⏱️</div>
+          <div class="stat-val" style="font-size:13px;margin-top:2px">5 Days</div>
+          <div class="stat-lbl">Wait before any enquiry is answered</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-icon" style="background:#fff0f0">🔁</div>
+          <div class="stat-val" style="color:#c0392b;font-size:13px;margin-top:2px">Auto-roll</div>
+          <div class="stat-lbl">Miss a deadline = money locked in again</div>
+        </div>
+      </div>
+
+      <div class="warns" style="margin-top:12px">
+        <div class="warn warn-red"><span class="warn-icon">🚫</span>Email, phone, WhatsApp, advisor messages — none of it legally counts</div>
+        <div class="warn warn-amber"><span class="warn-icon">⚠️</span>You are fully responsible for watching deadlines — one missed click can lock your money in</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAYMENT FLOW -->
+  <div class="section-label">
+    <div class="sline"></div>
+    <div class="stxt">Where your money goes when you send it</div>
+    <div class="sline"></div>
+  </div>
+
+  <div class="conn">
+    <div class="vline"></div>
+    <div class="conn-chip">You wire funds to one of the banks below</div>
+    <div class="vline"></div>
+    <div class="arrow-d"></div>
+  </div>
+
+  <!-- ── TIER 5: BANKS ── -->
+  <div class="row r3">
+    <div class="card t-green">
+      <div class="card-head">
+        <div class="icon-wrap">🏛️</div>
+        <div class="card-meta">
+          <div class="card-role">USD Payments</div>
+          <div class="card-name">JPMorgan Chase</div>
+          <div class="card-loc">New York, USA</div>
+        </div>
+      </div>
+      <div class="chips"><span class="chip chip-green">USD only</span></div>
+      <ul class="bullets">
+        <li>Receives your USD wire transfer</li>
+        <li>Account held in Manhattan ST Notes' name</li>
+      </ul>
+    </div>
+
+    <div class="card t-green">
+      <div class="card-head">
+        <div class="icon-wrap">💱</div>
+        <div class="card-meta">
+          <div class="card-role">All Other Currencies</div>
+          <div class="card-name">Cambridge Mercantile Corp. (UK)</div>
+          <div class="card-loc">London, UK · via Barclays</div>
+        </div>
+      </div>
+      <div class="chips">
+        <span class="chip chip-green">GBP · EUR · AUD</span>
+        <span class="chip chip-green">SGD · CHF · AED · CAD</span>
+      </div>
+      <ul class="bullets">
+        <li>A foreign exchange company — not the issuer</li>
+        <li>Your money passes through here before reaching Manhattan ST Notes</li>
+      </ul>
+      <div class="warns">
+        <div class="warn warn-amber"><span class="warn-icon">⚠️</span>Third-party middleman — your money doesn't go directly to the issuer</div>
+      </div>
+    </div>
+
+    <div class="card t-grey">
+      <div class="card-head">
+        <div class="icon-wrap">🔄</div>
+        <div class="card-meta">
+          <div class="card-role">Returns Come Back To</div>
+          <div class="card-name">Your Nominated Bank</div>
+          <div class="card-loc">The bank account you register</div>
+        </div>
+      </div>
+      <div class="chips"><span class="chip chip-grey">Income · Principal · ARC</span></div>
+      <ul class="bullets">
+        <li>All payments come back here</li>
+        <li>Changing this account requires full re-verification</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- UNDERLYING ASSETS -->
+  <div class="section-label">
+    <div class="sline"></div>
+    <div class="stxt">What your money is actually invested in</div>
+    <div class="sline"></div>
+  </div>
+
+  <div class="conn">
+    <div class="vdash"></div>
+    <div class="conn-chip">Funds deployed into these — you cannot inspect or verify them</div>
+    <div class="vdash"></div>
+    <div class="arrow-d"></div>
+  </div>
+
+  <!-- ── TIER 6: ASSETS ── -->
+  <div class="row r3">
+    <div class="card t-red">
+      <div class="card-head">
+        <div class="icon-wrap">⚖️</div>
+        <div class="card-meta">
+          <div class="card-role">Main Investment</div>
+          <div class="card-name">Lawsuit Funding</div>
+          <div class="card-loc">Litigation finance</div>
+        </div>
+      </div>
+      <div class="chips"><span class="chip chip-red">High risk</span><span class="chip chip-red">No visibility</span></div>
+      <ul class="bullets">
+        <li>Your money funds large-scale legal cases and bankruptcies</li>
+        <li>Returns depend entirely on <strong>winning those cases</strong></li>
+        <li>You are not allowed to see which cases or how they're going</li>
+      </ul>
+      <div class="warns">
+        <div class="warn warn-red"><span class="warn-icon">🚫</span>Bonus payments (ARC) are capped at 150% of your investment — but pay <strong>zero</strong> if no lawsuits are won. Treat them as a bonus, not income.</div>
+      </div>
+    </div>
+
+    <div class="card t-red">
+      <div class="card-head">
+        <div class="icon-wrap">🔗</div>
+        <div class="card-meta">
+          <div class="card-role">Secondary Investment</div>
+          <div class="card-name">Private Credit &amp; Related Companies</div>
+          <div class="card-loc">Affiliated platforms — unnamed</div>
+        </div>
+      </div>
+      <div class="chips"><span class="chip chip-red">Unnamed parties</span><span class="chip chip-red">No auditor</span></div>
+      <ul class="bullets">
+        <li>Also invested in "affiliated" companies — names not disclosed</li>
+        <li>Could be companies owned by the same people running this program</li>
+        <li>No independent auditor is mentioned anywhere in the agreement</li>
+      </ul>
+      <div class="warns">
+        <div class="warn warn-red"><span class="warn-icon">🚫</span>No third party checking the numbers or verifying your money is safe</div>
+      </div>
+    </div>
+
+    <div class="card t-orange">
+      <div class="card-head">
+        <div class="icon-wrap">🌏</div>
+        <div class="card-meta">
+          <div class="card-role">Optional Structure</div>
+          <div class="card-name">Singapore Company (VCC)</div>
+          <div class="card-loc">Singapore — purpose undefined</div>
+        </div>
+      </div>
+      <div class="chips"><span class="chip chip-orange">Vague</span><span class="chip chip-orange">Undefined</span></div>
+      <ul class="bullets">
+        <li>Your money may also be routed through a Singapore company</li>
+        <li>Mentioned in the agreement but never explained</li>
+        <li>No fees, governance, or oversight details provided</li>
+      </ul>
+      <div class="warns">
+        <div class="warn warn-amber"><span class="warn-icon">❓</span>No details given — you don't know what this is or how it affects you</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROS / CONS TABLE -->
+  <div class="section-label">
+    <div class="sline"></div>
+    <div class="stxt">Unregistered securities — pros &amp; cons at a glance</div>
+    <div class="sline"></div>
+  </div>
+
+  <div class="procons-wrap">
+    <div class="procons-card">
+      <div class="pc-header">
+        <span class="pc-icon">🏢</span>
+        <span class="pc-title">For the Company (Issuer)</span>
+      </div>
+      <table class="pc-table">
+        <thead>
+          <tr>
+            <th class="th-pro">✅ Pros</th>
+            <th class="th-con">❌ Cons</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Lower costs</strong> — no SEC registration fees or heavy legal bills</td>
+            <td><strong>Capital limits</strong> — strict caps on how much total money can be raised</td>
+          </tr>
+          <tr>
+            <td><strong>Faster funding</strong> — skips lengthy regulatory review, raises money quickly</td>
+            <td><strong>Smaller investor pool</strong> — can mostly only accept wealthy, accredited investors</td>
+          </tr>
+          <tr>
+            <td><strong>Privacy</strong> — no public filing of financials or business strategy</td>
+            <td><strong>Strict compliance</strong> — must still follow complex state laws and SEC exemption rules</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="procons-card">
+      <div class="pc-header">
+        <span class="pc-icon">🧑‍💼</span>
+        <span class="pc-title">For You (The Investor)</span>
+      </div>
+      <table class="pc-table">
+        <thead>
+          <tr>
+            <th class="th-pro">✅ Pros</th>
+            <th class="th-con">❌ Cons</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>High return potential</strong> — early access to private deals not available on public markets</td>
+            <td><strong>Locked capital</strong> — strict resale rules mean you cannot easily get your money out</td>
+          </tr>
+          <tr>
+            <td><strong>Discount entry</strong> — securities often priced lower due to illiquidity</td>
+            <td><strong>High risk</strong> — private early-stage deals fail often; total loss is possible</td>
+          </tr>
+          <tr>
+            <td>—</td>
+            <td><strong>Limited info</strong> — fewer financial updates make it hard to track performance</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ══ ARC SECTION ══ -->
+  <div class="arch-title-row" style="width:100%;max-width:1040px;margin-bottom:20px;margin-top:32px">
+    <h2>Post Maturity Bonus</h2>
+    <p>How the Tier I ARC bonus layer works after your principal is returned at Day 360</p>
+  </div>
+  <div class="arc-wrap" style="margin-top:0">
+    <div class="arc-header">
+      <div class="arc-header-text">
+        <h2>Tier I ARC — Accumulating Return Continuation</h2>
+        <p>The post-maturity bonus layer that activates after your principal is returned at Day 360. No redeployment of your delivered principal — this runs entirely on the fund's own litigation proceeds.</p>
+      </div>
+      <div class="arc-header-badge">
+        <div class="abv">1.5× A</div>
+        <div class="abl">Maximum bonus cap</div>
+      </div>
+    </div>
+
+    <!-- ARC FLOW -->
+    <div class="arc-flow">
+      <div class="arc-flow-step">
+        <div class="afs-dot" style="background:#7c5cbf">🛡️</div>
+        <div class="afs-lbl">Principal Delivered</div>
+      </div>
+      <div class="afs-arrow">→</div>
+      <div class="arc-flow-step">
+        <div class="afs-dot" style="background:#5a3da0">⚡</div>
+        <div class="afs-lbl">ARC Activated Day 361</div>
+      </div>
+      <div class="afs-arrow">→</div>
+      <div class="arc-flow-step">
+        <div class="afs-dot" style="background:#4a2890">🔄</div>
+        <div class="afs-lbl">Rolling 90-Day Determinations</div>
+      </div>
+      <div class="afs-arrow">→</div>
+      <div class="arc-flow-step">
+        <div class="afs-dot" style="background:#3a1e78">💰</div>
+        <div class="afs-lbl">Distribution (if realised)</div>
+      </div>
+      <div class="afs-arrow">→</div>
+      <div class="arc-flow-step">
+        <div class="afs-dot" style="background:#c9a84c">🔒</div>
+        <div class="afs-lbl">1.5× Cap Applied</div>
+      </div>
+      <div class="afs-arrow">→</div>
+      <div class="arc-flow-step">
+        <div class="afs-dot" style="background:#888">🏁</div>
+        <div class="afs-lbl">ARC Concludes</div>
+      </div>
+    </div>
+
+    <div class="arc-body">
+      <table class="arc-table">
+        <tr>
+          <td>Activation</td>
+          <td>Starts on Day 361 — the day after your principal is returned at maturity</td>
+        </tr>
+        <tr>
+          <td>ARC Window</td>
+          <td>Day 361 – 720 (a further 360 calendar days after maturity)</td>
+        </tr>
+        <tr>
+          <td>Determination Dates</td>
+          <td>Bonus amounts assessed 4 times a year: <strong>April 30 · July 31 · October 31 · January 31</strong></td>
+        </tr>
+        <tr>
+          <td>Subscribed Principal (A)</td>
+          <td>The reference amount used in all calculations — your original investment</td>
+        </tr>
+        <tr>
+          <td>Participation Allocation Limit (PAL)</td>
+          <td>Maximum paid out per quarter = <strong>0.5 × A</strong> (e.g. $50,000 on a $100,000 investment)</td>
+        </tr>
+        <tr>
+          <td>Aggregate Cap (AC)</td>
+          <td>Maximum total ever paid across all ARC distributions = <strong>1.5 × A</strong> (e.g. $150,000 on $100,000)</td>
+        </tr>
+        <tr>
+          <td>Realised Upstream Proceeds (RUP)</td>
+          <td>The actual litigation profits allocated to your note — assessed at each determination date</td>
+        </tr>
+        <tr>
+          <td>ARC Distribution</td>
+          <td>Each payment = the <strong>lowest</strong> of: RUP, PAL, and remaining capacity. Protects against overpayment.</td>
+        </tr>
+        <tr class="arc-warn-row">
+          <td>No Proceeds Scenario 🚫</td>
+          <td><strong>If RUP = 0 → you receive $0.</strong> If the lawsuits don't win or generate proceeds, no bonus is paid — for that quarter or potentially ever.</td>
+        </tr>
+        <tr>
+          <td>Cap Control</td>
+          <td>Once total ARC paid reaches 1.5 × A, no further distributions are made — the program ends automatically</td>
+        </tr>
+        <tr>
+          <td>Termination</td>
+          <td>ARC ends automatically when total distributions equal the aggregate cap (1.5 × A)</td>
+        </tr>
+        <tr>
+          <td>Reporting</td>
+          <td>Position statement issued within 10 business days of each determination date — via InvestorDisplay only</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  Source: Subscription Agreement · DocuSign ID: 21DD5046-A09D-8ACD-81C8-87E07764A47A · Status: SENT, 0 signatures · May 12, 2026<br>
+  For informational purposes only. Not legal or financial advice. Always consult an independent advisor before investing.
+</div>
+
+<script>
+  const RATES = { r90: 0.07, r180: 0.10, r270: 0.135, r360: 0.16, arcMax: 1.50 };
+
+  function fmt(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function recalculate() {
+    const raw = parseFloat(document.getElementById('principalInput').value);
+    const p = isNaN(raw) || raw < 0 ? 0 : raw;
+
+    const p90  = p * RATES.r90;
+    const p180 = p * RATES.r180;
+    const p270 = p * RATES.r270;
+    const p360 = p * RATES.r360;
+    const total = p90 + p180 + p270 + p360;
+    const totalPct = p > 0 ? ((total / p) * 100).toFixed(1) : '0.0';
+    const arcMax  = p * RATES.arcMax;
+
+    document.getElementById('pay90').textContent   = fmt(p90);
+    document.getElementById('pay180').textContent  = fmt(p180);
+    document.getElementById('pay270').textContent  = fmt(p270);
+    document.getElementById('pay360').textContent  = fmt(p360) + ' + ' + fmt(p);
+    document.getElementById('payARC').textContent  = '$0 – ' + fmt(arcMax);
+
+    document.getElementById('totalIncome').textContent   = fmt(total);
+    document.getElementById('totalIncomePct').textContent = totalPct + '% of your investment';
+    document.getElementById('principalBack').textContent  = fmt(p);
+    document.getElementById('arcMax').textContent         = 'Up to ' + fmt(arcMax) + ' if lawsuits win';
+  }
+
+  // Animate number counting on page load
+  window.addEventListener('DOMContentLoaded', () => {
+    recalculate();
+    const input = document.getElementById('principalInput');
+    input.addEventListener('focus', () => input.select());
+  });
+</script>
+</body>
+</html>
